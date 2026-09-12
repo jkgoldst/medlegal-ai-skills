@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QME AI Hero. Before the exam. Before you sign.</title>
-<meta name="description" content="Free tools for California QMEs that prepare your questions and check your draft, run privately in the AI account you already have.">
+<title>QME AI Hero. Practical AI for QMEs.</title>
+<meta name="description" content="QME AI Hero is the practical medical process for using AI in medical legal evaluations, from record review to finished, defensible product.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -21,51 +21,42 @@
 
 <header class="top">
   <a class="brand" href="./">QME AI Hero</a>
+  <nav class="nav" aria-label="Site">
+    <a href="./" aria-current="page">Start Here</a>
+    <a href="skills.html">Skills</a>
+    <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">Open Source</a>
+    <a href="draft-review.html">Tooling</a>
+  </nav>
   <button class="btn-pill" id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
 </header>
 
 <main class="main">
 
-  <section class="hero">
-    <div class="eyebrow">For California QMEs</div>
-    <h1>Before the exam.<br>Before you sign.</h1>
-    <p class="lede">Free tools for California QMEs that prepare your questions and check your draft, run privately in the AI account you already have.</p>
-    <div class="cta-row"><a class="btn-primary" href="#start">Check your setup first</a></div>
-  </section>
-
-  <section class="strip" aria-label="Where the tools fit in a case">
-    <div class="tl">
-      <div class="tl-line" aria-hidden="true"></div>
-      <ol class="tl-ticks">
-        <li class="tick pinned"><span class="tick-dot"></span><span class="tick-label">Before any of it</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Referral</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Records</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Exam</span></li>
-        <li class="tick pinned"><span class="tick-dot"></span><span class="tick-label">Draft</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Signing</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Deposition</span></li>
-      </ol>
-      <div class="tl-cards">
-        <a class="tl-card" style="--slot: 1" href="qme-env-audit.html">
-          <div class="m-name">Environment check</div>
-          <div class="m-cmd">/qme-env-audit</div>
-          <div class="m-desc">Where case data goes in your AI account, and what to fix, before any real case goes in.</div>
-          <div class="m-link">What happens when you run it</div>
-        </a>
-        <a class="tl-card" style="--slot: 5" href="draft-review.html">
-          <div class="m-name">Draft review</div>
-          <div class="m-cmd invite">Full draft review, by invitation</div>
-          <div class="m-desc">Your draft checked against the transcript, the records, and itself, on a managed case.</div>
-          <div class="m-link">Request an invitation</div>
-        </a>
+  <section class="hero hero-split">
+    <div class="hero-text">
+      <div class="eyebrow">Practical AI for QMEs</div>
+      <h1>Your medical legal judgment matters more than ever.</h1>
+      <p class="lede">QME AI Hero is the practical medical process for using AI in medical legal evaluations, from record review to finished, defensible product.</p>
+      <div class="cta-row">
+        <a class="btn-primary" href="#start">Start with the setup check</a>
+        <a class="btn-outline" href="skills.html">See the Skills</a>
       </div>
     </div>
-    <div class="strip-note">More moments as we go.</div>
+    <figure class="hero-photo">
+      <img src="assets/josh.jpg" alt="Josh Goldstein" onerror="this.parentNode.classList.add('missing')">
+      <div class="photo-fallback" aria-hidden="true">JG</div>
+      <figcaption><span class="photo-name">Josh Goldstein</span><span class="photo-role">Tresa</span></figcaption>
+    </figure>
   </section>
 
-  <section class="peer">
-    <p class="peer-line">The Skills check what's in front of you. Tresa checks it against everything else in the case.</p>
-    <p class="peer-sub">Tresa also drafts the report from your interview and records, for your review and signature. <a href="https://app.tresagroup.com" target="_blank" rel="noopener">See Tresa</a></p>
+  <section class="why" id="why">
+    <h2>You shouldn't have to trust AI blindly.</h2>
+    <div class="prose">
+      <p>A lot of physicians are skeptical of AI in medical-legal work. For good reason. AI can miss important facts, misread records, and produce confident answers that sound right but aren't.</p>
+      <p>The answer isn't to hand over your judgment. It's to use AI in a way that keeps the evidence visible, the reasoning reviewable, and the physician in control.</p>
+      <p>Used well, AI can help you review more thoroughly, find what matters faster, and spend more of your time on the clinical reasoning only you can provide.</p>
+      <p>QME AI Hero is for evaluators who want the benefits of AI without having to take its answers on faith.</p>
+    </div>
   </section>
 
   <section class="start" id="start">
@@ -84,17 +75,10 @@
     <p class="lede-sm">Each tool runs inside the AI account you already pay for. Nothing is uploaded to us, there is no login, and no case data reaches our side. Whether that account is fit for case data is exactly what the environment check tells you.</p>
   </section>
 
-  <details class="tech">
-    <summary>For technical users</summary>
-    <div class="tech-body">
-      <p>These are Agent Skills: a folder with a <span class="mono">SKILL.md</span> and reference files, MIT licensed, source on <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">GitHub</a>.</p>
-      <div class="terminal">
-        <div class="terminal-cmd"><span class="prompt">$</span> npx skills@latest add jkgoldst/qme-skills</div>
-        <button class="btn-terminal copy-cmd" data-cmd="npx skills@latest add jkgoldst/qme-skills">Copy</button>
-      </div>
-      <p>Works in Claude Code, Codex, and other skill-aware agents. Then run <span class="mono">/qme-env-audit</span>, or <span class="mono">/qme-env-audit --technical</span> for a codebase- or infrastructure-backed review.</p>
-    </div>
-  </details>
+  <section class="peer">
+    <p class="peer-line">The Skills check what's in front of you. Tresa checks it against everything else in the case.</p>
+    <p class="peer-sub">Tresa also drafts the report from your interview and records, for your review and signature. <a href="https://app.tresagroup.com" target="_blank" rel="noopener">See Tresa</a></p>
+  </section>
 
 </main>
 

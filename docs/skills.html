@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills. QME AI Hero.</title>
+<meta name="description" content="Free tools for California QMEs that prepare your questions and check your draft, run privately in the AI account you already have.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('qme-theme');
+      if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="./">QME AI Hero</a>
+  <nav class="nav" aria-label="Site">
+    <a href="./">Start Here</a>
+    <a href="skills.html" aria-current="page">Skills</a>
+    <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">Open Source</a>
+    <a href="draft-review.html">Tooling</a>
+  </nav>
+  <button class="btn-pill" id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
+</header>
+
+<main class="main">
+
+  <section class="hero hero-sub">
+    <div class="eyebrow">For California QMEs</div>
+    <h1>Before the exam.<br>Before you sign.</h1>
+    <p class="lede">Free tools for California QMEs that prepare your questions and check your draft, run privately in the AI account you already have.</p>
+  </section>
+
+  <section class="strip" aria-label="Where the tools fit in a case">
+    <div class="tl">
+      <div class="tl-line" aria-hidden="true"></div>
+      <ol class="tl-ticks">
+        <li class="tick pinned"><span class="tick-dot"></span><span class="tick-label">Before any of it</span></li>
+        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Referral</span></li>
+        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Records</span></li>
+        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Exam</span></li>
+        <li class="tick pinned"><span class="tick-dot"></span><span class="tick-label">Draft</span></li>
+        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Signing</span></li>
+        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Deposition</span></li>
+      </ol>
+      <div class="tl-cards">
+        <a class="tl-card" style="--slot: 1" href="qme-env-audit.html">
+          <div class="m-name">Environment check</div>
+          <div class="m-cmd">/qme-env-audit</div>
+          <div class="m-desc">Where case data goes in your AI account, and what to fix, before any real case goes in.</div>
+          <div class="m-link">What happens when you run it</div>
+        </a>
+        <a class="tl-card" style="--slot: 5" href="draft-review.html">
+          <div class="m-name">Draft review</div>
+          <div class="m-cmd invite">Full draft review, by invitation</div>
+          <div class="m-desc">Your draft checked against the transcript, the records, and itself, on a managed case.</div>
+          <div class="m-link">Request an invitation</div>
+        </a>
+      </div>
+    </div>
+    <div class="strip-note">More moments as we go.</div>
+  </section>
+
+  <details class="tech">
+    <summary>For technical users</summary>
+    <div class="tech-body">
+      <p>These are Agent Skills: a folder with a <span class="mono">SKILL.md</span> and reference files, MIT licensed, source on <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">GitHub</a>.</p>
+      <div class="terminal">
+        <div class="terminal-cmd"><span class="prompt">$</span> npx skills@latest add jkgoldst/qme-skills</div>
+        <button class="btn-terminal copy-cmd" data-cmd="npx skills@latest add jkgoldst/qme-skills">Copy</button>
+      </div>
+      <p>Works in Claude Code, Codex, and other skill-aware agents. Then run <span class="mono">/qme-env-audit</span>, or <span class="mono">/qme-env-audit --technical</span> for a codebase- or infrastructure-backed review.</p>
+    </div>
+  </details>
+
+</main>
+
+<footer class="foot">QME AI Hero is an open project from Tresa. MIT licensed.</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
