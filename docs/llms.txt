@@ -1,4 +1,4 @@
-# QME AI Hero
+# MedLegal AI Hero
 
 > Open, MIT-licensed Claude Code skills for California QME (Qualified Medical Evaluator) work, from Tresa. Every skill runs in the physician's own account; no case material is sent to us.
 

@@ -1,4 +1,4 @@
-/* QME AI Hero. Tokens from the original Claude Design canvas. */
+/* MedLegal AI Hero. Tokens from the original Claude Design canvas. */
 
 :root {
   --hue: 45;
@@ -204,6 +204,19 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
 .start h2 { margin-bottom: 12px; }
 .start .lede-sm { margin-bottom: 24px; }
 .trust { padding: 32px var(--pad-x) 48px; max-width: calc(680px + var(--pad-x)); }
+
+/* Two ways */
+.ways { padding: 56px var(--pad-x) 48px; max-width: calc(1000px + var(--pad-x)); }
+.ways h2 { margin-bottom: 28px; }
+.ways-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.way h3 { font-size: 20px; font-weight: 600; margin-bottom: 14px; line-height: 1.3; }
+.way .prose { font-size: 16px; gap: 14px; }
+.ways-line { margin-top: 36px; font-size: 20px; font-weight: 600; line-height: 1.4; max-width: 760px; text-wrap: pretty; }
+.ways-cta { margin-top: 12px; font-size: 15px; }
+.ways-cta a { color: var(--accent); font-weight: 600; }
+.skill-group { font-family: var(--mono); font-size: 13px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+.skills-more + .skill-group { margin-top: 40px; }
+.skill-group-empty { font-size: 15px; color: var(--muted-faint); }
 .trust h2 { margin-bottom: 12px; }
 .trust .lede-sm { margin-bottom: 0; }
 .compat { margin-top: 20px; font-size: 13.5px; color: var(--muted); line-height: 1.55; border-top: 1px solid var(--border); padding-top: 14px; }
@@ -272,6 +285,7 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
   .top { flex-wrap: wrap; gap: 12px 20px; }
   .nav { order: 3; flex-basis: 100%; gap: 18px; overflow-x: auto; }
   .hero-split { grid-template-columns: 1fr; gap: 32px; }
+  .ways-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-photo { order: -1; align-items: flex-start; }
   .hero-photo img, .photo-fallback { width: 160px; height: 200px; }
   .hero-photo figcaption { align-items: flex-start; }
