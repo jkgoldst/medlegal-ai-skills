@@ -244,11 +244,11 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
 [hidden] { display: none !important; }
 
 /* Start Here: split hero with photo */
-.hero-split { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 56px; align-items: center; max-width: calc(1000px + var(--pad-x)); }
+.hero-split { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: center; max-width: calc(1040px + var(--pad-x)); }
 .hero-split h1 { font-size: 46px; }
 .hero-photo { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-.hero-photo img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 3px solid var(--surface); box-shadow: 0 16px 48px -18px rgba(0,0,0,0.45); display: block; }
-.photo-fallback { display: none; width: 220px; height: 220px; border-radius: 50%; background: var(--bg-alt); border: 1px dashed var(--border); color: var(--muted-faint); font-family: var(--mono); font-size: 40px; align-items: center; justify-content: center; }
+.hero-photo img { width: 300px; height: 380px; border-radius: 14px; object-fit: cover; object-position: 50% 20%; box-shadow: 0 24px 60px -24px rgba(0,0,0,0.5); display: block; }
+.photo-fallback { display: none; width: 300px; height: 380px; border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--border); color: var(--muted-faint); font-family: var(--mono); font-size: 40px; align-items: center; justify-content: center; }
 .hero-photo.missing img { display: none; }
 .hero-photo.missing .photo-fallback { display: flex; }
 .hero-photo figcaption { display: flex; flex-direction: column; align-items: center; gap: 2px; }
@@ -266,7 +266,7 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
   .nav { order: 3; flex-basis: 100%; gap: 18px; overflow-x: auto; }
   .hero-split { grid-template-columns: 1fr; gap: 32px; }
   .hero-photo { order: -1; align-items: flex-start; }
-  .hero-photo img, .photo-fallback { width: 120px; height: 120px; }
+  .hero-photo img, .photo-fallback { width: 160px; height: 200px; }
   .hero-photo figcaption { align-items: flex-start; }
 }
 
@@ -296,3 +296,17 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
   .bio { grid-template-columns: 1fr; gap: 20px; }
   .bio-photo { width: 120px; height: 120px; }
 }
+
+/* Header actions + feedback dialog */
+.top-actions { display: flex; gap: 8px; align-items: center; }
+.feedback { border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--fg); padding: 0; width: min(440px, calc(100vw - 32px)); box-shadow: 0 30px 80px -30px rgba(0,0,0,0.5); }
+.feedback::backdrop { background: rgba(0,0,0,0.35); }
+.feedback-form { display: flex; flex-direction: column; gap: 14px; padding: 18px 20px 20px; }
+.feedback-head { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+.feedback-form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500; }
+.feedback-form textarea, .feedback-form input { font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--fg); resize: vertical; }
+.feedback-form textarea:focus, .feedback-form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.feedback-foot { display: flex; align-items: center; gap: 14px; }
+.feedback-foot .btn-primary { border: 0; }
+.feedback-foot .note { margin-top: 0; }
+.feedback-done { padding: 24px 20px; font-size: 16px; }

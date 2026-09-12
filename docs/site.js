@@ -47,4 +47,32 @@
       });
     });
   }
+
+  var fb = document.getElementById('feedback');
+  var fbOpen = document.getElementById('feedback-open');
+  if (fb && fbOpen && fb.showModal) {
+    var fbForm = document.getElementById('feedback-form');
+    fbOpen.addEventListener('click', function () {
+      fbForm.querySelector('[name="page"]').value = location.pathname;
+      fb.showModal();
+    });
+    document.getElementById('feedback-close').addEventListener('click', function () { fb.close(); });
+    fbForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = fbForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      fetch(fbForm.getAttribute('data-endpoint'), {
+        method: 'POST',
+        body: new FormData(fbForm),
+        headers: { Accept: 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error('send failed');
+        fbForm.hidden = true;
+        document.getElementById('feedback-done').hidden = false;
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Something went wrong. Try again.';
+      });
+    });
+  }
 })();
