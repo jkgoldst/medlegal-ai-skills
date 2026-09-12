@@ -1,0 +1,20 @@
+# QME AI Hero
+
+> Open, MIT-licensed Claude Code skills for California QME (Qualified Medical Evaluator) work, from Tresa. Every skill runs in the physician's own account; no case material is sent to us.
+
+## Pages
+
+- [Start Here](https://qmeaihero.com/): what the project is and why you should not have to trust AI blindly
+- [Skills](https://qmeaihero.com/skills.html): the skill lifecycle and how to install
+- [Environment audit](https://qmeaihero.com/qme-env-audit.html): trace PHI through the systems you already use
+- [Draft review](https://qmeaihero.com/draft-review.html): review tooling
+
+## Machine-readable
+
+- [skills.md](https://qmeaihero.com/skills.md): one entry per skill with install path
+- [sitemap.md](https://qmeaihero.com/sitemap.md)
+- [rss.xml](https://qmeaihero.com/rss.xml)
+
+## Source
+
+- https://github.com/jkgoldst/qme-skills

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QME AI Hero</title>
+    <link>https://qmeaihero.com/</link>
+    <description>Open Claude Code skills for California QME work, from Tresa.</description>
+    <language>en-us</language>
+    <atom:link href="https://qmeaihero.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>qme-env-audit skill released</title>
+      <link>https://qmeaihero.com/qme-env-audit.html</link>
+      <guid>https://qmeaihero.com/qme-env-audit.html</guid>
+      <description>Audit the environment you already use to handle QME case data with AI.</description>
+    </item>
+  </channel>
+</rss>
