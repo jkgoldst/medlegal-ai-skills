@@ -37,10 +37,7 @@
       <div class="eyebrow">Practical AI for QMEs</div>
       <h1>Your medical legal judgment matters more than ever.</h1>
       <p class="lede">QME AI Hero is the practical medical process for using AI in medical legal evaluations, from record review to finished, defensible product.</p>
-      <div class="cta-row">
-        <a class="btn-primary" href="#start">Start with the setup check</a>
-        <a class="btn-outline" href="skills.html">See the Skills</a>
-      </div>
+      <div class="cta-row"><a class="btn-primary" href="skills.html">Browse the skills</a></div>
     </div>
     <figure class="hero-photo">
       <img src="assets/josh.jpg" alt="Josh Goldstein" onerror="this.parentNode.classList.add('missing')">
@@ -49,6 +46,7 @@
     </figure>
   </section>
 
+  <hr class="rule">
   <section class="why" id="why">
     <h2>You shouldn't have to trust AI blindly.</h2>
     <div class="prose">
@@ -59,17 +57,36 @@
     </div>
   </section>
 
-  <section class="start" id="start">
-    <h2>Start with the environment check</h2>
-    <p class="lede-sm">It asks about your setup one question at a time, tells you what it could verify and what it could not, and gives you a fix list in priority order. Run it before any real case goes into that account.</p>
-    <ol class="steps">
-      <li><a href="qme-env-audit.zip" download>Download the environment check</a> <span class="mono muted">(zip)</span></li>
-      <li>In Claude, open <span class="mono">Settings</span>, then <span class="mono">Capabilities</span>, then <span class="mono">Skills</span>, and upload it.</li>
-      <li>Start a new chat and type <span class="mono">/qme-env-audit</span>.</li>
-    </ol>
-    <div class="note">Needs a Claude Pro, Max, Team, or Enterprise plan with code execution turned on.</div>
+  <hr class="rule">
+  <section class="skills-summary" id="skills">
+    <h2>The Skills</h2>
+    <p class="lede-sm">Each one does a single job at one moment in the case, in the AI account you already have. Install one, run it, and read the result with the source next to it.</p>
+    <div class="skill-grid">
+      <a class="skill-card" href="qme-env-audit.html">
+        <div class="skill-head"><span class="m-name">Environment check</span><span class="tag-open">Available</span></div>
+        <div class="m-cmd">/qme-env-audit</div>
+        <div class="m-desc">Where case data goes in your AI account, and what to fix, before any real case goes in.</div>
+      </a>
+      <a class="skill-card" href="https://github.com/jkgoldst/qme-skills/pull/2" target="_blank" rel="noopener">
+        <div class="skill-head"><span class="m-name">Interview prep</span><span class="tag-managed">In review</span></div>
+        <div class="m-cmd">/qme-interview-prep</div>
+        <div class="m-desc">The questions to ask the injured worker, each citing the document and page it came from.</div>
+      </a>
+      <a class="skill-card" href="https://github.com/jkgoldst/qme-skills/pull/4" target="_blank" rel="noopener">
+        <div class="skill-head"><span class="m-name">Date check</span><span class="tag-managed">In review</span></div>
+        <div class="m-cmd">/qme-date-check</div>
+        <div class="m-desc">Years that collide, ages that do not add up, disability that starts before the last day worked.</div>
+      </a>
+      <a class="skill-card" href="https://github.com/jkgoldst/qme-skills/pull/3" target="_blank" rel="noopener">
+        <div class="skill-head"><span class="m-name">GAF to WPI</span><span class="tag-managed">In review</span></div>
+        <div class="m-cmd">/qme-gaf-wpi</div>
+        <div class="m-desc">The stated GAF and WPI checked against the 2005 PDRS table, with boundary scores flagged.</div>
+      </a>
+    </div>
+    <p class="skills-more"><a href="skills.html">See where each one fits in a case</a></p>
   </section>
 
+  <hr class="rule">
   <section class="trust">
     <h2>Runs in your account. Nothing leaves it.</h2>
     <p class="lede-sm">Each tool runs inside the AI account you already pay for. Nothing is uploaded to us, there is no login, and no case data reaches our side. Whether that account is fit for case data is exactly what the environment check tells you.</p>
@@ -78,6 +95,18 @@
   <section class="peer">
     <p class="peer-line">The Skills check what's in front of you. Tresa checks it against everything else in the case.</p>
     <p class="peer-sub">Tresa also drafts the report from your interview and records, for your review and signature. <a href="https://app.tresagroup.com" target="_blank" rel="noopener">See Tresa</a></p>
+  </section>
+
+  <section class="bio" id="about">
+    <img class="bio-photo" src="assets/josh.jpg" alt="Josh Goldstein">
+    <div class="bio-text">
+      <h2>Hi, I'm Josh Goldstein</h2>
+      <div class="prose">
+        <p>Before creating QME AI Hero, I spent years building and deploying AI products in highly regulated environments, including government acquisition and medical-legal work. I've worked directly with physicians, attorneys, and public-sector teams to figure out where AI is genuinely useful, and where it needs strong human oversight.</p>
+        <p>I also built Tresa, an AI platform designed around the actual workflow of complex medical-legal evaluations.</p>
+        <p>I'm building QME AI Hero to help every evaluator use AI safely, effectively, and without giving up clinical judgment.</p>
+      </div>
+    </div>
   </section>
 
 </main>

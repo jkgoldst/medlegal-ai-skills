@@ -259,7 +259,7 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
 .why { padding: 56px var(--pad-x) 24px; max-width: calc(680px + var(--pad-x)); }
 .why h2 { margin-bottom: 20px; }
 .prose { display: flex; flex-direction: column; gap: 18px; font-size: 17px; line-height: 1.7; color: var(--fg); text-wrap: pretty; }
-.prose p:last-child { font-weight: 600; }
+.why .prose p:last-child { font-weight: 600; }
 
 @media (max-width: 860px) {
   .top { flex-wrap: wrap; gap: 12px 20px; }
@@ -268,4 +268,31 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
   .hero-photo { order: -1; align-items: flex-start; }
   .hero-photo img, .photo-fallback { width: 120px; height: 120px; }
   .hero-photo figcaption { align-items: flex-start; }
+}
+
+/* Dividers */
+.rule { border: 0; border-top: 1px solid var(--border); margin: 8px var(--pad-x) 0; }
+
+/* Skills summary */
+.skills-summary { padding: 56px var(--pad-x) 40px; max-width: calc(1000px + var(--pad-x)); }
+.skills-summary h2 { margin-bottom: 12px; }
+.skills-summary .lede-sm { margin-bottom: 28px; }
+.skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.skill-card { border: 1px solid var(--border); border-radius: 6px; padding: 18px 20px; background: var(--surface); display: block; transition: box-shadow 0.15s, border-color 0.15s; }
+.skill-card:hover { border-color: var(--accent-border); box-shadow: 0 6px 24px -12px rgba(0,0,0,0.35); }
+.skill-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.skills-more { margin-top: 20px; font-size: 14px; }
+.skills-more a { color: var(--accent); font-weight: 600; }
+.trust { padding-top: 48px; }
+
+/* Bio */
+.bio { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 40px; align-items: start; padding: 64px var(--pad-x) 24px; max-width: calc(880px + var(--pad-x)); }
+.bio-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--surface); box-shadow: 0 16px 48px -18px rgba(0,0,0,0.45); }
+.bio h2 { margin-bottom: 16px; }
+.bio .prose { font-size: 16px; }
+
+@media (max-width: 860px) {
+  .skill-grid { grid-template-columns: 1fr; }
+  .bio { grid-template-columns: 1fr; gap: 20px; }
+  .bio-photo { width: 120px; height: 120px; }
 }
