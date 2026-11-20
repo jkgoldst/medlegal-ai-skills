@@ -1,11 +1,11 @@
 # Skills
 
-Each skill is a folder containing a `SKILL.md`, installed by symlinking or copying it into `~/.claude/skills/`. Source: https://github.com/jkgoldst/qme-skills
+Each skill is a folder containing a `SKILL.md`, installed by copying it into your agent's skills folder (for Claude Code, `~/.claude/skills/`). Source: https://github.com/jkgoldst/qme-skills
 
-## qme-env-audit
+## case-facts
 
-Audit the actual environment used to handle California QME case data with AI. Trace PHI through systems, verify controls where possible, distinguish VERIFIED/REPORTED/UNKNOWN, identify QME-specific integrity risks, and produce a prioritized remediation plan. Never certifies HIPAA or legal compliance.
+Check identifying and administrative facts (examinee name, date of birth, injury dates, claim and case numbers, employer, attorneys, claims administrator, evaluation details) across medical-legal case documents. Shows what agrees, what conflicts, and what is missing, with a source citation for every value, and never silently picks between conflicting values.
 
-- Path: `skills/qme-env-audit/SKILL.md`
-- Page: https://qmeaihero.com/qme-env-audit.html
-- Argument hint: `[--technical]`
+- Path: `skills/case-facts/SKILL.md`
+- Fictional example packet: `skills/case-facts/examples/`
+- Page: https://qmeaihero.com/case-facts.html

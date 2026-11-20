@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skills. MedLegal AI Hero.</title>
-<meta name="description" content="Free tools for California QMEs that prepare your questions and check your draft, run privately in the AI account you already have.">
+<meta name="description" content="Free, practical AI skills for physicians doing medical-legal work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -22,10 +22,9 @@
 <header class="top">
   <a class="brand" href="./">MedLegal AI Hero</a>
   <nav class="nav" aria-label="Site">
-    <a href="./">Start Here</a>
+    <a href="start-here.html">Start Here</a>
     <a href="skills.html" aria-current="page">Skills</a>
     <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">Open Source</a>
-    <a href="draft-review.html">Tooling</a>
   </nav>
   <div class="top-actions">
     <button class="btn-pill" id="feedback-open">Feedback</button>
@@ -36,50 +35,35 @@
 <main class="main">
 
   <section class="hero hero-sub">
-    <div class="eyebrow">For California QMEs</div>
-    <h1>Before the exam.<br>Before you sign.</h1>
-    <p class="lede">Free tools for California QMEs that prepare your questions and check your draft, run privately in the AI account you already have.</p>
+    <div class="eyebrow">Skills</div>
+    <h1>Free skills for medical-legal work.</h1>
+    <p class="lede">Each skill is a set of reusable instructions that teaches an AI tool one medical-legal task. Use them in the AI tool you already have. Try each one on a fictional case first.</p>
   </section>
 
-  <section class="strip" aria-label="Where the tools fit in a case">
-    <div class="tl">
-      <div class="tl-line" aria-hidden="true"></div>
-      <ol class="tl-ticks">
-        <li class="tick pinned"><span class="tick-dot"></span><span class="tick-label">Before any of it</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Referral</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Records</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Exam</span></li>
-        <li class="tick pinned"><span class="tick-dot"></span><span class="tick-label">Draft</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Signing</span></li>
-        <li class="tick"><span class="tick-dot"></span><span class="tick-label">Deposition</span></li>
-      </ol>
-      <div class="tl-cards">
-        <a class="tl-card" style="--slot: 1" href="qme-env-audit.html">
-          <div class="m-name">Environment check</div>
-          <div class="m-cmd">/qme-env-audit</div>
-          <div class="m-desc">Where case data goes in your AI account, and what to fix, before any real case goes in.</div>
-          <div class="m-link">What happens when you run it</div>
-        </a>
-        <a class="tl-card" style="--slot: 5" href="draft-review.html">
-          <div class="m-name">Draft review</div>
-          <div class="m-cmd invite">Full draft review, by invitation</div>
-          <div class="m-desc">Your draft checked against the transcript, the records, and itself, on a managed case.</div>
-          <div class="m-link">Request an invitation</div>
-        </a>
+  <section class="path">
+    <div class="path-grid">
+      <a class="path-card" href="case-facts.html">
+        <div class="path-step">Skill #1</div>
+        <h3 class="mono">/case-facts</h3>
+        <div class="path-sub">Available now</div>
+        <div class="path-desc">Checks names, dates, claim numbers, and parties across your case documents. Shows what agrees, what conflicts, and what's missing, with the source for every value.</div>
+        <div class="m-link">Explore /case-facts</div>
+      </a>
+      <div class="path-card soon">
+        <div class="path-step">Coming</div>
+        <h3>More Skills Coming</h3>
+        <div class="path-sub">A growing library of practical workflows</div>
+        <div class="path-desc">Records review, report critique, deposition preparation, and other reusable skills.</div>
       </div>
     </div>
-    <div class="strip-note">More moments as we go.</div>
+    <p class="skills-more">New to AI in medical-legal work? <a href="start-here.html">Read the Start Here guide first.</a></p>
   </section>
 
   <details class="tech">
     <summary>For technical users</summary>
     <div class="tech-body">
-      <p>These are Agent Skills: a folder with a <span class="mono">SKILL.md</span> and reference files, MIT licensed, source on <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">GitHub</a>.</p>
-      <div class="terminal">
-        <div class="terminal-cmd"><span class="prompt">$</span> npx skills@latest add jkgoldst/qme-skills</div>
-        <button class="btn-terminal copy-cmd" data-cmd="npx skills@latest add jkgoldst/qme-skills">Copy</button>
-      </div>
-      <p>Works in Claude Code, Codex, and other skill-aware agents. Then run <span class="mono">/qme-env-audit</span>, or <span class="mono">/qme-env-audit --technical</span> for a codebase- or infrastructure-backed review.</p>
+      <p>These are Agent Skills: a folder with a <span class="mono">SKILL.md</span> and supporting files, MIT licensed, source on <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">GitHub</a>.</p>
+      <p>Copy a skill folder from <span class="mono">skills/</span> into your agent's skills folder (for Claude Code, <span class="mono">~/.claude/skills/</span>), then run it by name, for example <span class="mono">/case-facts</span>.</p>
     </div>
   </details>
 
@@ -90,8 +74,8 @@
     <div>
       <h3>Learn</h3>
       <ul>
-        <li><span class="foot-placeholder" title="Not written yet">Med Legal AI Coding Dictionary</span></li>
-        <li><span class="foot-placeholder" title="Not written yet">AI Med Legal Roadmap</span></li>
+        <li><a href="start-here.html">Start Here guide</a></li>
+        <li><a href="case-facts.html">/case-facts</a></li>
       </ul>
     </div>
     <div>

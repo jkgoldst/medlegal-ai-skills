@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MedLegal AI Hero. Practical AI for medical-legal work.</title>
-<meta name="description" content="MedLegal AI Hero is the practical process for using AI in medical-legal evaluations, from record review to a finished, defensible work product.">
+<title>MedLegal AI Hero. Learn to use AI in medical-legal work.</title>
+<meta name="description" content="Free, practical AI skills for physicians doing medical-legal work. Use them with the AI tools you already have, or build your own workflows.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -20,12 +20,11 @@
 <body>
 
 <header class="top">
-  <a class="brand" href="./">MedLegal AI Hero</a>
+  <a class="brand" href="./" aria-current="page">MedLegal AI Hero</a>
   <nav class="nav" aria-label="Site">
-    <a href="./" aria-current="page">Start Here</a>
+    <a href="start-here.html">Start Here</a>
     <a href="skills.html">Skills</a>
     <a href="https://github.com/jkgoldst/qme-skills" target="_blank" rel="noopener">Open Source</a>
-    <a href="draft-review.html">Tooling</a>
   </nav>
   <div class="top-actions">
     <button class="btn-pill" id="feedback-open">Feedback</button>
@@ -38,9 +37,13 @@
   <section class="hero hero-split">
     <div class="hero-text">
       <div class="eyebrow">Practical AI for medical-legal work</div>
-      <h1>Your medical-legal judgment matters more than ever.</h1>
-      <p class="lede">MedLegal AI Hero is the practical process for using AI in medical-legal evaluations, from record review to a finished, defensible work product.</p>
-      <div class="cta-row"><a class="btn-primary" href="skills.html">Browse the skills</a></div>
+      <h1>Learn to use AI in medical-legal work. On your own terms.</h1>
+      <div class="prose lede">
+        <p>We publish free, practical AI skills for physicians doing medical-legal work. Use them with the AI tools you already have, or build your own workflows.</p>
+        <p>We'll help you understand what works, what to verify, and how to protect sensitive information.</p>
+        <p>If you'd rather not assemble and manage the entire workflow yourself, that's what <a class="accent" href="https://www.tresagroup.com/" target="_blank" rel="noopener">Tresa</a> is for.</p>
+      </div>
+      <div class="cta-row"><a class="btn-primary" href="start-here.html">Start here</a></div>
     </div>
     <figure class="hero-photo">
       <img src="assets/josh.jpg" alt="Josh Goldstein" onerror="this.parentNode.classList.add('missing')">
@@ -50,69 +53,30 @@
   </section>
 
   <hr class="rule">
-  <section class="why" id="why">
-    <h2>You shouldn't have to trust AI blindly.</h2>
-    <div class="prose">
-      <p>A lot of physicians and other medical-legal experts are skeptical of AI. For good reason. AI can miss important facts, misread records, and produce confident answers that sound right but aren't.</p>
-      <p>The answer isn't to hand over your judgment. It's to use AI in a way that keeps the evidence visible, the reasoning reviewable, and the expert in control.</p>
-      <p>Used well, AI can help you review more thoroughly, find what matters faster, and spend more of your time on the clinical reasoning and professional judgment only you can provide.</p>
-      <p>MedLegal AI Hero is for experts who want the benefits of AI without having to take its answers on faith.</p>
-    </div>
-  </section>
-
-  <hr class="rule">
-  <section class="skills-summary" id="skills">
-    <h2>The Skills</h2>
-    <p class="lede-sm">Each skill does one job at one moment in a medical-legal case, inside the AI account you already have. Install one, run it, and review the result with the source material next to it.</p>
-    <h3 class="skill-group">QME Skills</h3>
-    <div class="skill-grid">
-      <a class="skill-card" href="qme-env-audit.html">
-        <div class="skill-head"><span class="m-name">Environment check</span><span class="tag-open">Available</span></div>
-        <div class="m-cmd">/qme-env-audit</div>
-        <div class="m-desc">Where case data goes in your AI account, and what to fix, before any real case goes in.</div>
+  <section class="path" id="path">
+    <h2>Where to begin</h2>
+    <div class="path-grid">
+      <a class="path-card" href="start-here.html">
+        <div class="path-step">Guide</div>
+        <h3>Start Here: Set Up AI for Medical-Legal Work</h3>
+        <div class="path-sub">A practical guide, not a skill</div>
+        <div class="path-desc">The easiest ways to get started, including clinical AI workspaces, PHI safeguards, what to verify, and more technical API options for tinkerers.</div>
+        <div class="m-link">Read the guide</div>
       </a>
-      <a class="skill-card" href="https://github.com/jkgoldst/qme-skills/pull/2" target="_blank" rel="noopener">
-        <div class="skill-head"><span class="m-name">Interview prep</span><span class="tag-managed">In review</span></div>
-        <div class="m-cmd">/qme-interview-prep</div>
-        <div class="m-desc">The questions to ask the injured worker, each citing the document and page it came from.</div>
+      <a class="path-card" href="case-facts.html">
+        <div class="path-step">Skill #1</div>
+        <h3 class="mono">/case-facts</h3>
+        <div class="path-sub">A useful tool you can run immediately</div>
+        <div class="path-desc">Checks names, dates, claim numbers, and parties across your case documents. Shows what agrees, what conflicts, and what's missing, with a fictional case packet to try it on.</div>
+        <div class="m-link">Explore /case-facts</div>
       </a>
-      <a class="skill-card" href="https://github.com/jkgoldst/qme-skills/pull/4" target="_blank" rel="noopener">
-        <div class="skill-head"><span class="m-name">Date check</span><span class="tag-managed">In review</span></div>
-        <div class="m-cmd">/qme-date-check</div>
-        <div class="m-desc">Years that collide, ages that do not add up, disability that starts before the last day worked.</div>
-      </a>
-      <a class="skill-card" href="https://github.com/jkgoldst/qme-skills/pull/3" target="_blank" rel="noopener">
-        <div class="skill-head"><span class="m-name">GAF to WPI</span><span class="tag-managed">In review</span></div>
-        <div class="m-cmd">/qme-gaf-wpi</div>
-        <div class="m-desc">The stated GAF and WPI checked against the 2005 PDRS table, with boundary scores flagged.</div>
-      </a>
-    </div>
-    <p class="skills-more"><a href="skills.html">See where each one fits in a QME case</a></p>
-    <h3 class="skill-group">IME Skills</h3>
-    <p class="skill-group-empty">None published yet.</p>
-  </section>
-
-  <hr class="rule">
-  <section class="ways" id="ways">
-    <h2>Two ways to use MedLegal AI Hero</h2>
-    <div class="ways-grid">
-      <div class="way">
-        <h3>Run the Skills for free</h3>
-        <div class="prose">
-          <p>The Skills are free to use in the AI account you already have. There's no MedLegal AI Hero login, and your case data does not come to us.</p>
-          <p>You stay in control of the environment you choose. Our environment check helps you understand whether that account is appropriate for sensitive medical-legal information before you use it on a real case.</p>
-        </div>
-      </div>
-      <div class="way">
-        <h3>Or use Tresa for a purpose-built medical-legal workspace</h3>
-        <div class="prose">
-          <p>Tresa is a secure environment designed specifically for medical-legal cases.</p>
-          <p>Instead of working with one document or task at a time, Tresa keeps the case together: records, interview, findings, evidence, and report. It can check new work against the rest of the case and carry that context forward throughout the evaluation.</p>
-        </div>
+      <div class="path-card soon">
+        <div class="path-step">Coming</div>
+        <h3>More Skills Coming</h3>
+        <div class="path-sub">A growing library of practical workflows</div>
+        <div class="path-desc">Records review, report critique, deposition preparation, and other reusable skills.</div>
       </div>
     </div>
-    <p class="ways-line">The free Skills help you use AI well. Tresa gives you a secure place to do the whole case.</p>
-    <p class="ways-cta"><a href="https://app.tresagroup.com" target="_blank" rel="noopener">See Tresa</a></p>
   </section>
 
   <section class="bio" id="about">
@@ -134,8 +98,8 @@
     <div>
       <h3>Learn</h3>
       <ul>
-        <li><span class="foot-placeholder" title="Not written yet">Med Legal AI Coding Dictionary</span></li>
-        <li><span class="foot-placeholder" title="Not written yet">AI Med Legal Roadmap</span></li>
+        <li><a href="start-here.html">Start Here guide</a></li>
+        <li><a href="case-facts.html">/case-facts</a></li>
       </ul>
     </div>
     <div>

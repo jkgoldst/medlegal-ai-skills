@@ -1,13 +1,13 @@
 # MedLegal AI Hero
 
-> Open, MIT-licensed Claude Code skills for California QME (Qualified Medical Evaluator) work, from Tresa. Every skill runs in the physician's own account; no case material is sent to us.
+> Free, practical, MIT-licensed AI skills for physicians doing medical-legal work, from Tresa. Each skill runs in the physician's own AI tool; no case material is sent to us.
 
 ## Pages
 
-- [Start Here](https://qmeaihero.com/): what the project is and why you should not have to trust AI blindly
-- [Skills](https://qmeaihero.com/skills.html): the skill lifecycle and how to install
-- [Environment audit](https://qmeaihero.com/qme-env-audit.html): trace PHI through the systems you already use
-- [Draft review](https://qmeaihero.com/draft-review.html): review tooling
+- [Home](https://qmeaihero.com/): what the project is
+- [Start Here](https://qmeaihero.com/start-here.html): a guide to setting up AI for medical-legal work, PHI safeguards, and trying a first skill on a fictional case
+- [Skills](https://qmeaihero.com/skills.html): the published skills
+- [/case-facts](https://qmeaihero.com/case-facts.html): compare identifying and administrative facts across case documents and surface conflicts with source evidence
 
 ## Machine-readable
 
