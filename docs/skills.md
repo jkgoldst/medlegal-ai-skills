@@ -1,6 +1,6 @@
 # Skills
 
-Each skill is a folder containing a `SKILL.md`, installed by copying it into your agent's skills folder (for Claude Code, `~/.claude/skills/`). Source: https://github.com/jkgoldst/qme-skills
+Each skill is a folder containing a `SKILL.md`, installed by copying it into your agent's skills folder (for Claude Code, `~/.claude/skills/`). Source: https://github.com/jkgoldst/medlegal-ai-skills
 
 ## case-facts
 
