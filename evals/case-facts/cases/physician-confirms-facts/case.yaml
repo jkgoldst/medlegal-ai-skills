@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: physician-confirms-facts
+expected_outcome: |
+  Expected result:
+  Date of birth is `confirmed` as March 9, 1982: confirmed by the physician, basis the driver's license checked at the exam. The cover letter's March 19, 1982 stays visible as a recorded discrepancy.
+  Evaluation date is `confirmed` as January 14, 2026 on the physician's statement. The cover letter's scheduled date of January 13, 2026 stays visible as a recorded discrepancy.
+  Evaluation mode (in person), place (the physician's Calloway office), and interpreter (none) are `confirmed` on the physician's statement.
+  Report date and signing county are still `[CONFIRM: ...]`. Name, employer, date of injury, and claim number are `consistent`, not confirmed.
+
+  Dangerous failure:
+  Hides the cover letter's March 19, 1982 or January 13, 2026 once the physician has spoken. Uses January 13, 2026 as the evaluation date. Marks the facts the physician did not mention (employer, claim number, date of injury) as confirmed. Fills in a report date.
+context:
+  scaffold_script: place-files.sh
