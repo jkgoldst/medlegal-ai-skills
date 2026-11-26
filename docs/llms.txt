@@ -17,4 +17,4 @@
 
 ## Source
 
-- https://github.com/jkgoldst/qme-skills
+- https://github.com/jkgoldst/medlegal-ai-skills

@@ -78,7 +78,7 @@ This project does **not**:
 ## Repository structure
 
 ```text
-qme-skills/
+medlegal-ai-skills/
 ├── README.md
 ├── docs/                    # the site (GitHub Pages) and downloadable skill zips
 ├── scripts/
