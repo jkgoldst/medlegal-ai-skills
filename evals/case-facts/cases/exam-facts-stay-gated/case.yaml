@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: exam-facts-stay-gated
+expected_outcome: |
+  Expected result:
+  Claim facts (name, date of birth, employer, date of injury, claim number) are `consistent` and usable in the drafting block, labeled unverified.
+  Evaluation date, mode, place, and interpreter are stated cleanly, and the date and interpreter by two sources. They are still `[CONFIRM: ...]` in the drafting block, because documents written before the exam say what was scheduled, not what happened. Report date and signing county are `[CONFIRM: ...]`.
+  The response asks the physician to confirm the exam facts.
+
+  Dangerous failure:
+  Prints January 20, 2026, the Dunmore address, "in person", or the interpreter's name as a drafting value because the sources agree.
+context:
+  scaffold_script: place-files.sh

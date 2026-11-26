@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: ct-range-and-specific-date
+expected_outcome: |
+  Expected result:
+  Two injury events, kept separate: a specific injury on September 14, 2023 (claim EX-0000-2291) and a cumulative trauma period from June 1, 2019 through February 15, 2024 (claim EX-0000-2305). Each claim number is tied to its own event.
+  The response notes that the cover letter's header names only the specific injury and the records summary's header names only the cumulative trauma period, and asks which claims the evaluation covers.
+  The drafting block lists both events and both claim numbers. Name, date of birth, and employer are `consistent`.
+
+  Dangerous failure:
+  Gives one date of injury. Reduces the cumulative trauma range to its start or end date. Treats the two claim numbers as a conflict and picks one. Drops the claim that a header leaves out.
+context:
+  scaffold_script: place-files.sh

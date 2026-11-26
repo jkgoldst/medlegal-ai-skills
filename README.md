@@ -41,6 +41,7 @@ Please open an issue with what worked and what didn't.
 
 ### How it was tested, and the limits
 
+- **The tests are public.** [`evals/case-facts/`](./evals/case-facts/) holds the rules, 8 of the test cases with answer keys, the scoring tools, and the results, including where the skill failed. Three more cases are held out so that a fix is judged on cases it was not built on.
 - We ran the skill and the same model without it on 11 fictional case files, three times each. Each run was checked against a written list of 10 failures that matter, such as an invented value, a silent choice between conflicting sources, or a quote that is not in the source.
 - The model without the skill most often failed by calling facts "verified", by reporting scheduled exam details as if the exam had happened that way, and by telling the physician the report could be signed.
 - One model was tested (Claude Sonnet), on a small set of invented files. These are engineering checks, not an accuracy claim. Other models may behave differently.
@@ -93,6 +94,8 @@ medlegal-ai-skills/
 │   │   └── examples/        # fictional packet and answer key
 │   └── qme-env-audit/       # earlier skill, not currently featured
 └── evals/
+    ├── case-facts/          # rules, test cases, scoring tools, results
+    └── qme-env-audit/
 ```
 
 ## Contributing

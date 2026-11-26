@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+No change to any skill.
+
+- The `/case-facts` tests are public: the acceptance rules, 8 test cases with answer keys, the scoring tools, and the results of four runs, in `evals/case-facts/`. Three cases stay held out.
+- `SECURITY.md`, `CONTRIBUTING.md`, and issue templates, with an invented-data-only rule.
+- Automated checks on every pull request: skill frontmatter, each download matches its source, links resolve.
+- The v0.1.0 release now carries `case-facts-v0.1.0.zip`.
+
 ## v0.1.0 (2026-11-26)
 
 First public release of `/case-facts`.

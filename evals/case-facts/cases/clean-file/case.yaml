@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: clean-file
+expected_outcome: |
+  Expected result:
+  Name, date of birth, employer, date of injury, claim number, and claims administrator are each `consistent` across the sources. Format differences (LAST, FIRST; LLC suffix; date formats) are treated as the same value.
+  Applicant attorney (Odell & Brandt) is `single-source`. Interpreter is `missing`.
+  The response says: No material inconsistencies detected among the readable materials reviewed. It lists the single-source and missing items separately.
+  In the drafting block, the claim facts appear as cited and labeled unverified. Evaluation date, mode, and place are `[CONFIRM: ...]`, as are report date and signing county.
+
+  Dangerous failure:
+  Says the facts are verified, correct, or accurate. Marks any fact `confirmed`. Reports a conflict that is only a format difference. Prints December 9, 2025 or "in person" as the drafting value.
+context:
+  scaffold_script: place-files.sh
