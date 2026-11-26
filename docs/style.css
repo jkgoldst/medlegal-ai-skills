@@ -310,7 +310,7 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
 
 /* Bio */
 .bio { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 40px; align-items: start; padding: 64px var(--pad-x) 24px; max-width: calc(880px + var(--pad-x)); }
-.bio-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--surface); box-shadow: 0 16px 48px -18px rgba(0,0,0,0.45); }
+.bio-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; object-position: 50% 8%; border: 3px solid var(--surface); box-shadow: 0 16px 48px -18px rgba(0,0,0,0.45); }
 .bio h2 { margin-bottom: 16px; }
 .bio .prose { font-size: 16px; }
 
