@@ -161,6 +161,8 @@ h2 { font-size: 30px; font-weight: 700; margin-bottom: 36px; }
 .foot li a:hover { color: var(--fg); }
 .foot-placeholder { color: var(--muted-faint); cursor: default; }
 .foot-line { font-family: var(--mono); font-size: 12px; color: var(--muted-faint); }
+.foot-line a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.foot-line a:hover { color: var(--accent); }
 
 /* Hero */
 .hero { padding: 72px var(--pad-x) 32px; }
