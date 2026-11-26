@@ -7,23 +7,31 @@
     if (t) return t === 'dark';
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
-  function syncThemeLabel() { themeBtn.textContent = isDark() ? 'Light' : 'Dark'; }
-  themeBtn.addEventListener('click', function () {
-    var next = isDark() ? 'light' : 'dark';
-    root.dataset.theme = next;
-    try { localStorage.setItem('qme-theme', next); } catch (e) {}
+  if (themeBtn) {
+    var syncThemeLabel = function () { themeBtn.textContent = isDark() ? 'Light' : 'Dark'; };
+    themeBtn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('qme-theme', next); } catch (e) {}
+      syncThemeLabel();
+    });
     syncThemeLabel();
-  });
-  syncThemeLabel();
+  }
 
   Array.prototype.slice.call(document.querySelectorAll('.copy-cmd')).forEach(function (btn) {
     var timer;
     btn.addEventListener('click', function () {
       var cmd = btn.getAttribute('data-cmd');
-      if (navigator.clipboard) navigator.clipboard.writeText(cmd).catch(function () {});
-      btn.textContent = 'Copied';
-      clearTimeout(timer);
-      timer = setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+      var show = function (label) {
+        btn.textContent = label;
+        clearTimeout(timer);
+        timer = setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+      };
+      if (!navigator.clipboard) { show('Select and copy'); return; }
+      navigator.clipboard.writeText(cmd).then(
+        function () { show('Copied'); },
+        function () { show('Select and copy'); }
+      );
     });
   });
 
