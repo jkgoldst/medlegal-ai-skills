@@ -42,12 +42,12 @@
 
   <article class="article">
     <p>AI can help you review records, check case facts, draft reports, and prepare for depositions. Getting started is easier than you might think.</p>
-    <p>This guide will help you choose an AI environment, understand the safeguards you need, and try your first AI skill.</p>
+    <p>By the end of this guide, you'll have chosen an AI workspace, understood the basic safeguards for handling sensitive information, and completed your first medical-legal AI exercise using a fictional case.</p>
 
-    <h2>1. Choose where you'll use AI</h2>
+    <h2>1. Choose your AI workspace</h2>
     <p>You have a few options. For most physicians, we recommend starting with an existing AI workspace rather than building your own.</p>
 
-    <h3>The easiest path: A clinical AI workspace</h3>
+    <h3>Recommended starting point: An existing AI workspace</h3>
     <p>Products like ChatGPT for Clinicians provide a familiar chat interface, without requiring you to configure servers, APIs, or other technical infrastructure.</p>
     <p>If you're an eligible U.S. clinician, ChatGPT for Clinicians is free and offers a way to sign a Business Associate Agreement (BAA) for your individual workspace.</p>
     <p><a href="https://help.openai.com/en/articles/20001202-chatgpt-for-clinicians" target="_blank" rel="noopener">Get started with ChatGPT for Clinicians</a></p>
@@ -60,25 +60,37 @@
     <p>But you'll also take responsibility for configuring and securing more of the system.</p>
     <p><strong>Our advice:</strong> Start simple. You can learn a tremendous amount without building custom infrastructure.</p>
 
-    <h2>2. Check your setup before using real records</h2>
+    <h2>2. Protect sensitive information</h2>
     <p>Medical-legal case files often contain highly sensitive information. Before uploading real records, make sure you can answer these questions:</p>
     <ul>
       <li><strong>Where does the information go?</strong> Know which providers and services will process or store your files.</li>
       <li><strong>Is a BAA in place?</strong> If HIPAA applies, confirm the appropriate agreements are executed and cover the services you're using.</li>
+      <li><strong>Am I in the right workspace?</strong> Make sure you're using the approved workspace, not a personal AI account.</li>
       <li><strong>Will your data be used for model training?</strong> Verify the applicable policy rather than assuming.</li>
-      <li><strong>Who can access your information?</strong> Check account access, sharing permissions, and any connected tools.</li>
+      <li><strong>Who can access your information?</strong> Check account access and sharing permissions.</li>
+      <li><strong>Could a connected service receive it?</strong> A plugin, an external tool, or an integration may send case information somewhere else.</li>
       <li><strong>What happens to your files afterward?</strong> Understand retention, deletion, and backup policies.</li>
-      <li><strong>Is this use authorized?</strong> Confirm any practice, organizational, contractual, and applicable legal requirements.</li>
+      <li><strong>Is this use authorized?</strong> Confirm any practice, organizational, and applicable legal requirements.</li>
+      <li><strong>Do other confidentiality obligations apply?</strong> A contract, a protective order, or another requirement may restrict what you can do with these records.</li>
     </ul>
     <p>A BAA is important, but it isn't a certificate of HIPAA compliance. And turning off model training doesn't establish that an environment is appropriate for PHI.</p>
+    <p>For more, see the U.S. Department of Health and Human Services <a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html" target="_blank" rel="noopener">guidance on HIPAA and cloud computing</a>.</p>
     <p class="callout">If you can't establish that your setup is authorized for real patient information, use fictional case files until you can.</p>
 
-    <h2>3. Start with a fictional case</h2>
-    <p>The easiest way to learn AI is to try something useful.</p>
-    <p>Our skills are reusable instructions that teach an AI tool how to perform a particular task. They're designed to make common medical-legal workflows more systematic, transparent, and repeatable.</p>
-    <p>You can experiment without using any real patient information.</p>
+    <h2>3. Understand how AI skills work</h2>
+    <p>Three terms will help you make sense of everything else on this site.</p>
+    <ul>
+      <li><strong>Prompt.</strong> An instruction you give AI for one task. Example: "Compare the dates of birth in these two documents."</li>
+      <li><strong>Skill.</strong> A reusable set of instructions for doing a task the same way each time. Example: compare identifying information, flag discrepancies, cite sources, and never guess a missing fact.</li>
+      <li><strong>Workflow.</strong> A series of tasks organized into a repeatable process. Example: check the case facts, resolve the conflicts with the examinee, then draft from the confirmed facts.</li>
+    </ul>
+    <p>The power of a skill is that you don't have to reinvent your instructions every time you work on a new case.</p>
+    <p>Our skills are open source. You can read the instructions, understand the assumptions, and change them to suit your practice.</p>
 
-    <h3 id="case-facts">Try your first skill: <span class="mono">/case-facts</span></h3>
+    <h2>4. Run your first skill</h2>
+    <p>The easiest way to learn AI is to try something useful. You can do it without using any real patient information.</p>
+
+    <h3 id="case-facts">Try <span class="mono">/case-facts</span> on a fictional case</h3>
     <p>Two documents disagree about an examinee's birth date. Can AI catch the discrepancy before it ends up in the report?</p>
     <p><span class="mono">/case-facts</span> compares identifying information across case documents and shows you what agrees, what conflicts, and what's missing.</p>
     <p>It doesn't silently choose between contradictory facts. It shows you the evidence so you can decide.</p>
@@ -86,9 +98,20 @@
     <p>Start with the fictional example provided alongside the skill. Follow its installation instructions for your chosen AI tool, run the comparison, and review the findings.</p>
     <p>Depending on your AI environment, you may install the skill, attach its instructions, or use an equivalent supported workflow. Not every chat product supports slash-command skills directly.</p>
 
-    <h2>4. Keep yourself in the loop</h2>
+    <h2>5. Learn to evaluate AI</h2>
     <p>AI is good at processing large amounts of information. That doesn't make every conclusion reliable.</p>
-    <p>A few habits will make your work better:</p>
+
+    <h3>Test your tools</h3>
+    <p>Once you've run your first skill, change something in the fictional case and run it again.</p>
+    <ul>
+      <li>Introduce a conflicting date of birth.</li>
+      <li>Remove a piece of identifying information.</li>
+      <li>Add a document that contains an error.</li>
+    </ul>
+    <p>Did the AI catch the discrepancy? Did it say what was missing? Can you trace each finding back to the original document?</p>
+    <p>Learning to evaluate AI is as important as learning to use it. Over time, you'll learn which tasks you can delegate and which need closer supervision.</p>
+
+    <h3>Keep yourself in the loop</h3>
     <ul>
       <li><strong>Check the sources.</strong> Ask where a finding came from, and verify the underlying document.</li>
       <li><strong>Treat uncertainty as useful information.</strong> An unresolved fact is better than a plausible invention.</li>
@@ -97,15 +120,16 @@
     </ul>
     <p>The objective isn't to let AI make more decisions for you. It's to help you spend more time on the decisions that matter.</p>
 
-    <h2>5. Build from there</h2>
+    <h2>6. Build from there</h2>
     <p>Once you're comfortable with one skill, try others.</p>
     <p>You might use AI to organize a lengthy medical record, prepare questions for an interview, review a draft for internal inconsistencies, or test the reasoning behind an opinion.</p>
     <p>You don't need to adopt everything at once. Start with a specific task, understand what the AI does well, and learn where it needs supervision.</p>
 
-    <h3>Prefer someone to handle the whole workflow?</h3>
-    <p>These skills are free. You can use them independently, adapt them, or build your own workflows.</p>
-    <p>We also build <a href="https://www.tresagroup.com/" target="_blank" rel="noopener">Tresa</a>, an AI-powered platform for medical-legal evaluations. Tresa handles much more of the end-to-end process, for physicians who would rather focus on their evaluations than configure and manage the tools themselves.</p>
-    <p class="callout">Either way, our goal is the same: help physicians use AI without giving up their standards of quality, safety, and professional judgment.</p>
+    <h3>Help us build what's next</h3>
+    <p>This is a growing, open-source resource for medical-legal professionals.</p>
+    <p>If you've found a useful way to apply AI in your practice, found a limitation in one of our skills, or have an idea for a workflow you'd like to see, we'd love to hear from you.</p>
+    <p>You don't need to be a programmer to contribute. Your professional experience is what makes these tools better.</p>
+    <p>Use the Feedback button at the top of this page, or open an issue on <a href="https://github.com/jkgoldst/medlegal-ai-skills" target="_blank" rel="noopener">GitHub</a>.</p>
 
     <p class="fine">This guide is educational, not legal or compliance advice. Product features, terms, and eligibility can change. Always verify current requirements with your provider and, where appropriate, your organization's privacy or compliance advisor.</p>
   </article>
