@@ -30,11 +30,21 @@ Page: [qmeaihero.com/case-facts.html](https://qmeaihero.com/case-facts.html)
 
 ### Install
 
-- **Claude Code and other agents that read skill folders:** copy [`skills/case-facts`](./skills/case-facts/) into your skills folder (for Claude Code, `~/.claude/skills/`), then type `/case-facts`.
-- **Claude (claude.ai):** download [`case-facts.zip`](./docs/case-facts.zip) and upload it under *Settings → Capabilities → Skills*.
-- **Chat products without skill support:** attach `SKILL.md` with your documents and ask the AI to follow it.
+| Tool | Status | How |
+| --- | --- | --- |
+| Claude Code | **Supported.** Tested 2026-11-26 | Copy [`skills/case-facts`](./skills/case-facts/) into `.claude/skills/` in your project folder (or `~/.claude/skills/` to have it everywhere), then type `/case-facts`. A plain request such as "check my case for inconsistent identifying information" also starts it. It reads PDFs and text files. |
+| Claude (claude.ai) | Not tested yet | Download [`case-facts.zip`](./docs/case-facts.zip) and upload it under *Settings → Capabilities → Skills*. |
+| ChatGPT for Clinicians and other chat products | Not tested yet | Attach `SKILL.md` with your documents and ask the AI to follow it. |
+| Codex and other agents that read skill folders | Not tested yet | Copy the folder into the agent's skills folder. |
 
-We are still testing installation across AI tools. Please open an issue with what worked and what didn't.
+Please open an issue with what worked and what didn't.
+
+### How it was tested, and the limits
+
+- We ran the skill and the same model without it on 11 fictional case files, three times each. Each run was checked against a written list of 10 failures that matter, such as an invented value, a silent choice between conflicting sources, or a quote that is not in the source.
+- The model without the skill most often failed by calling facts "verified", by reporting scheduled exam details as if the exam had happened that way, and by telling the physician the report could be signed.
+- One model was tested (Claude Sonnet), on a small set of invented files. These are engineering checks, not an accuracy claim. Other models may behave differently.
+- The skill checks identifying and administrative facts only. Read its output as a list of things to check, not as clearance to sign.
 
 **Only use real patient records in an AI environment authorized for protected health information.** The skill provides no HIPAA compliance or security controls. If you can't establish that your setup is authorized, use fictional case files.
 

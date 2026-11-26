@@ -60,8 +60,8 @@
         <tr><td>Cover letter</td><td>April 21, 1971</td></tr>
       </tbody>
     </table>
-    <p>A typical AI draft might simply use one date. You might not notice the discrepancy until much later.</p>
-    <p><span class="mono">/case-facts</span> flags it instead:</p>
+    <p>A discrepancy like this is easy to miss. You might not notice it until much later.</p>
+    <p><span class="mono">/case-facts</span> flags it:</p>
     <div class="finding">
       <div class="finding-head"><span class="finding-label">CASE FACTS CHECK</span><span class="pill-danger">CONFLICT</span></div>
       <div class="finding-body">
@@ -77,6 +77,13 @@
       </div>
     </div>
     <p>Until you resolve it, the date stays blank rather than being guessed.</p>
+    <p>We tested the skill against the same AI model without it, on fictional case files. The plain model usually caught a conflict like this one. It went wrong in three other ways:</p>
+    <ul>
+      <li>It called facts "verified" when two documents merely agreed.</li>
+      <li>It reported the scheduled exam date, place, and interpreter as if the exam had happened that way.</li>
+      <li>It told the physician the report could be signed.</li>
+    </ul>
+    <p><span class="mono">/case-facts</span> is built to do none of the three.</p>
 
     <h2>When to use it</h2>
     <p>Run <span class="mono">/case-facts</span> when you've assembled the case file, ideally before the evaluation so you can resolve questions while the examinee is present.</p>
@@ -122,9 +129,9 @@
       <li><a href="https://github.com/jkgoldst/qme-skills/tree/main/skills/case-facts" target="_blank" rel="noopener">The skill folder on GitHub</a></li>
       <li><a href="case-facts.zip">Download the skill as a zip</a></li>
     </ul>
-    <p><strong>Claude Code and other agents that read skill folders:</strong> copy the <span class="mono">case-facts</span> folder into your skills folder (for Claude Code, <span class="mono">~/.claude/skills/</span>), then type <span class="mono">/case-facts</span>.</p>
-    <p><strong>Chat products:</strong> not every chat product supports slash-command skills. Where yours doesn't, attach <span class="mono">SKILL.md</span> with your documents and ask the AI to follow it.</p>
-    <p class="note">We're still testing installation across AI tools. Tell us what worked and what didn't with the Feedback button.</p>
+    <p><strong>Claude Code (tested):</strong> copy the <span class="mono">case-facts</span> folder into <span class="mono">.claude/skills/</span> in your project folder (or <span class="mono">~/.claude/skills/</span> to have it everywhere), then type <span class="mono">/case-facts</span>. A plain request such as "check my case for inconsistent identifying information" also starts it. It reads PDFs and text files.</p>
+    <p><strong>Chat products (not tested yet):</strong> not every chat product supports slash-command skills. Where yours doesn't, attach <span class="mono">SKILL.md</span> with your documents and ask the AI to follow it.</p>
+    <p class="note">Claude Code is the only tool we have tested so far. Tell us what worked and what didn't elsewhere with the Feedback button.</p>
 
     <h2>Common questions</h2>
     <h3>Does it choose the correct fact?</h3>

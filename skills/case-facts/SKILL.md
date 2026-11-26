@@ -10,12 +10,13 @@ A plausible report can still contain the wrong name, date, employer, or claim nu
 ## The contract
 
 - **Find; don't adjudicate.** Report competing values and their sources. Never silently choose a winner when the sources materially disagree.
-- **Evidence before assertion.** Every extracted value needs a source citation: document name plus page, section, or an exact searchable quote. Never invent a page number or quote.
+- **Evidence before assertion.** Every extracted value needs a source citation: document name plus page, section, or an exact searchable quote. Never invent a page number or quote. Quote marks mean the source's exact words, copied character for character, so the reader can search for them and find them. If you shorten or reword, drop the quote marks and cite the location instead.
 - **Silence is unknown.** A missing, blank, unreadable, or ambiguous value stays unknown. Do not infer it from surrounding facts, current dates, memory, or general knowledge.
 - **Agreement is not verification.** Two sources repeating a value may share the same underlying mistake. Label it `consistent`, not `confirmed`.
 - **A human confirms.** Only describe a fact as `confirmed` when the user explicitly confirms it or provides an identified authoritative basis and adopts the value. Preserve contradictory source statements even after confirmation.
 - **Preserve the distinction between reported and established facts.** “The examinee says they work at X” is not proof that X employed them on the date of injury.
 - **Stay in scope.** Check identifying and administrative case details, not medical diagnoses, causation, impairment, credibility, or legal conclusions.
+- **Signing is the physician's decision.** Never say the report is ready, or that the user can sign, finalize, send, or file it, even with conditions attached. This check sees only part of what that decision rests on, and a sentence like "you can sign if..." reads as clearance. If the user asks, say what the check found and what is still unconfirmed, and stop there.
 
 ## Before reading the file
 
@@ -53,7 +54,7 @@ For each fact, retain *every* distinct source statement and its evidence locatio
 Normalize formatting for comparison, not for changing what a source said:
 
 - Dates with explicit four-digit years may be compared across unambiguous formats (e.g., `4/12/1971` and `April 12, 1971`). Preserve the original text in evidence.
-- `LAST, FIRST` and `First Last`, changes in case, punctuation, and unambiguous corporate suffixes can be equivalent.
+- `LAST, FIRST` and `First Last`, changes in case, punctuation, and a corporate suffix that is present in one source and absent in another (`Inc.`, `LLC`, `Corp.`, `Co.`) are the same value. Mark the fact `consistent` and keep it out of the findings that need attention. Each finding costs the reader attention, and a format-only finding buries the real conflicts. Showing the variant spellings in the evidence column is enough.
 - Do not assume missing middle initials, different employers, distinct claim numbers, or different injury periods are equivalent.
 - Do not guess dates with two-digit years, unknown day/month order, or incomplete dates.
 - A transcription near-match may be a spelling or speech-recognition issue; mark it `needs checking` if equivalence is uncertain rather than silently merging it.
@@ -75,6 +76,13 @@ Use one of these statuses:
 | `needs checking` | A value is ambiguous or the apparent agreement/disagreement cannot be judged reliably. |
 
 A confirmed fact can still have a **recorded discrepancy**. Do not hide it.
+
+### Which values the drafter may use
+
+- **Claim facts** (name, date of birth, injury dates, claim and case numbers, employer, parties): a `single-source` or `consistent` value may be used in the draft, copied exactly as cited and labeled unverified.
+- **Examination facts** (evaluation mode, evaluation date, place of evaluation, interpreter): documents written before the exam state what was scheduled, not what happened. Leave each as `[CONFIRM: field]` until a person confirms it, even if a source states it cleanly.
+- **Physician-only facts** (report date, signing county): always `[CONFIRM: field]`.
+- **`conflict`, `missing`, `needs checking`:** always `[CONFIRM: field]`, with the competing values listed.
 
 ### 5. Produce the findings
 
@@ -104,7 +112,7 @@ After review, or immediately if the user requests a provisional handoff, produce
 
 Then include this instruction:
 
-> Use the confirmed values exactly as provided for identifying and administrative facts. Do not replace them with conflicting values found elsewhere in the records. Do not turn consistent, single-source, or unresolved items into confirmed assertions. Leave unresolved facts as `[CONFIRM: field]` and flag them for human review. Preserve source-attributed accounts as accounts rather than established facts.
+> Use the confirmed values exactly as provided for identifying and administrative facts. Do not replace them with conflicting values found elsewhere in the records. You may use a consistent or single-source claim fact exactly as cited, but do not describe it as confirmed. Leave examination facts, physician-only facts, and unresolved facts as `[CONFIRM: field]` and flag them for human review. Preserve source-attributed accounts as accounts rather than established facts.
 
 Never write a definitive narrative that resolves a conflict on the user's behalf.
 
@@ -146,10 +154,13 @@ If no discrepancies are found, say **“No material inconsistencies detected amo
 Before responding, verify:
 
 - Every substantive value and conflict has traceable source evidence.
+- Everything inside quote marks appears in the source exactly as written.
 - Sources that disagree are all shown, even where a person has confirmed one value.
 - Every unknown stays unknown; every unresolved field gets a placeholder.
 - No independent verification is implied merely because documents agree.
 - No medical opinion, legal certification, or HIPAA compliance claim is made.
+- Nothing tells the user the report is ready or that they can sign it.
+- No finding rests only on letter case, punctuation, name order, or a corporate suffix.
 - Any output limitations (incomplete files, uncertain extraction, unreviewed pages) are disclosed.
 
 The objective is **fewer unsupported facts in the report**, not an illusion of certainty.
