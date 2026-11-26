@@ -4,7 +4,7 @@ Free, practical AI skills for physicians doing medical-legal work. Use them with
 
 Site: **[qmeaihero.com](https://qmeaihero.com)**
 
-Each skill is a set of reusable instructions that teaches an AI tool one medical-legal task. The skills keep evidence traceable, uncertainty visible, and medical judgment with the physician.
+Each skill is a set of reusable instructions that teaches an AI tool one medical-legal task. The skills follow the open [Agent Skills specification](https://agentskills.io/specification): a folder with a `SKILL.md`. The skills keep evidence traceable, uncertainty visible, and medical judgment with the physician.
 
 > **Public-good project:** the skills in this repository are meant to be useful on their own. They are not tied to any commercial application.
 
@@ -80,9 +80,13 @@ This project does **not**:
 ```text
 medlegal-ai-skills/
 ├── README.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── SECURITY.md
 ├── docs/                    # the site (GitHub Pages) and downloadable skill zips
 ├── scripts/
-│   └── build-skill-zip.sh   # builds docs/<skill>.zip
+│   ├── build-skill-zip.sh   # builds docs/<skill>.zip
+│   └── check_repo.py        # frontmatter, zips match source, links resolve
 ├── skills/
 │   ├── case-facts/
 │   │   ├── SKILL.md
@@ -99,6 +103,10 @@ This project is early. The most useful contributions:
 - fictional test cases that expose failure modes
 - corrections where a skill overstates what an AI system can verify
 - proposals for small, reusable skills with a clear input, output, physician decision boundary, and evaluation method
+
+**Invented data only.** Never post real patient or case information in an issue, a pull request, or a test case. Everything here is public.
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md). To report a security or safety problem privately, see [`SECURITY.md`](./SECURITY.md).
 
 ## License
 

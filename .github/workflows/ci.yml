@@ -1,0 +1,21 @@
+name: checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skill frontmatter, zips match source, links resolve
+        run: python3 scripts/check_repo.py
+      - name: ShellCheck
+        run: shellcheck scripts/*.sh
+      - name: Site script parses
+        run: node --check docs/site.js

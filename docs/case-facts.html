@@ -179,12 +179,13 @@
 <dialog class="feedback" id="feedback">
   <form method="dialog" class="feedback-form" id="feedback-form" action="https://formspree.io/f/mqpqjgvn" data-endpoint="https://formspree.io/f/mqpqjgvn">
     <div class="feedback-head"><span>Feedback</span><button type="button" class="btn-pill" id="feedback-close" aria-label="Close">Close</button></div>
+    <p class="feedback-warn">Do not include patient or case information.</p>
     <label>What would make this more useful?<textarea name="message" rows="5" required></textarea></label>
     <label>Email, if you want a reply<input type="email" name="email" autocomplete="email"></label>
     <input type="hidden" name="page" value="">
     <div class="feedback-foot">
       <button type="submit" class="btn-primary">Send</button>
-      <span class="note">Goes to Formspree, then to us. Do not include patient information.</span>
+      <span class="note">Goes to Formspree, then to us.</span>
     </div>
   </form>
   <div class="feedback-done" id="feedback-done" hidden>Thank you. Read and appreciated.</div>

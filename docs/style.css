@@ -372,3 +372,5 @@ a.path-card:hover { border-color: var(--accent-border); box-shadow: 0 6px 24px -
 }
 .article .finding-fields { gap: 2px; }
 .article .finding-fields dt:not(:first-child) { margin-top: 14px; }
+
+.feedback-warn { margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--accent); }
